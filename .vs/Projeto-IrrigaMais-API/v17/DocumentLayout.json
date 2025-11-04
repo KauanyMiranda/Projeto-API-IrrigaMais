@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\controllers\\tiposensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:controllers\\tiposensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\datacontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:datacontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TipoSensorController.cs",
+              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\TipoSensorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TipoSensorController.cs",
+              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\TipoSensorController.cs",
+              "RelativeToolTip": "Controllers\\TipoSensorController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T04:03:35.913Z",
+              "WhenOpened": "2025-11-04T19:12:28.083Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SensorController.cs",
+              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\SensorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SensorController.cs",
+              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\SensorController.cs",
+              "RelativeToolTip": "Controllers\\SensorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T19:09:55.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\DataContext\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DataContext\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\DataContext\\AppDbContext.cs",
+              "RelativeToolTip": "DataContext\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T19:09:43.702Z"
             }
           ]
         }

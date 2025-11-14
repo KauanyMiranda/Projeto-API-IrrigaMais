@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\controllers\\tiposensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:controllers\\tiposensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\models\\dtos\\plantadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:models\\dtos\\plantadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\controllers\\plantacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:controllers\\plantacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\models\\dtos\\sensordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:models\\dtos\\sensordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\datacontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,44 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TipoSensorController.cs",
-              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\TipoSensorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TipoSensorController.cs",
-              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\TipoSensorController.cs",
-              "RelativeToolTip": "Controllers\\TipoSensorController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PlantaDto.cs",
+              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\PlantaDto.cs",
+              "RelativeDocumentMoniker": "Models\\Dtos\\PlantaDto.cs",
+              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\PlantaDto.cs",
+              "RelativeToolTip": "Models\\Dtos\\PlantaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T19:12:28.083Z",
+              "WhenOpened": "2025-11-14T20:00:51.112Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SensorController.cs",
               "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\SensorController.cs",
               "RelativeDocumentMoniker": "Controllers\\SensorController.cs",
               "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\SensorController.cs",
               "RelativeToolTip": "Controllers\\SensorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T19:09:55.36Z"
+              "WhenOpened": "2025-11-14T18:11:01.893Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PlantaController.cs",
+              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\PlantaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PlantaController.cs",
+              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\PlantaController.cs",
+              "RelativeToolTip": "Controllers\\PlantaController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAmwGIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T17:57:06.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\DataContext\\AppDbContext.cs",
               "RelativeDocumentMoniker": "DataContext\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\DataContext\\AppDbContext.cs",
               "RelativeToolTip": "DataContext\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T19:09:43.702Z"
+              "WhenOpened": "2025-11-14T19:43:51.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SensorDto.cs",
+              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\SensorDto.cs",
+              "RelativeDocumentMoniker": "Models\\Dtos\\SensorDto.cs",
+              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\SensorDto.cs",
+              "RelativeToolTip": "Models\\Dtos\\SensorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T18:08:30.098Z",
+              "EditorCaption": ""
             }
           ]
         }

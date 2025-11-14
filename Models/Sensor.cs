@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace Projeto_IrrigaMais_API.Models
@@ -17,7 +16,7 @@ namespace Projeto_IrrigaMais_API.Models
         public required string Localizacao { get; set; }
 
         [Column("status_sensor")]
-        public string Status { get; set; } = "Ativo";
+        public string StatusSensor { get; set; } = "Ativo";
 
         public virtual TipoSensor? TipoSensor { get; set; }
 

@@ -32,22 +32,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Projeto_IrrigaMais_API.Controllers.SensorController",
-    "Method": "Criar",
-    "RelativePath": "",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "novoSensor",
-        "Type": "Projeto_IrrigaMais_API.Models.Dtos.SensorDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
     "Method": "BuscarPorId",
     "RelativePath": "{id}",
@@ -111,9 +95,78 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Projeto_IrrigaMais_API.Controllers.TipoSensorController",
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.SensorController",
     "Method": "BuscarTodos",
     "RelativePath": "sensor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.SensorController",
+    "Method": "Criar",
+    "RelativePath": "sensor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoSensor",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.SensorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.SensorController",
+    "Method": "Atualizar",
+    "RelativePath": "sensor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "atualizarSensor",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.SensorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.SensorController",
+    "Method": "Remover",
+    "RelativePath": "sensor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.TipoSensorController",
+    "Method": "BuscarTodos",
+    "RelativePath": "tipoSensor",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

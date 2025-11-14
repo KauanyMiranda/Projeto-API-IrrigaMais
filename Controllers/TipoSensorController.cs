@@ -2,12 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Projeto_IrrigaMais_API.DataContext;
-using Projeto_IrrigaMais_API.Models;
-using Projeto_IrrigaMais_API.Models.Dtos;
 
 namespace Projeto_IrrigaMais_API.Controllers
 {
-    [Route("/sensor")]
+    [Route("/tipoSensor")]
     [ApiController]
     public class TipoSensorController : ControllerBase
     {
@@ -21,7 +19,9 @@ namespace Projeto_IrrigaMais_API.Controllers
         [HttpGet]
         public async Task<IActionResult> BuscarTodos()
         {
-            var tipoSensor = await _context.tipoSensores.ToListAsync();
+            var tipoSensor = await _context
+                .TipoSensores
+                .ToListAsync();
 
             return Ok(tipoSensor);
         }

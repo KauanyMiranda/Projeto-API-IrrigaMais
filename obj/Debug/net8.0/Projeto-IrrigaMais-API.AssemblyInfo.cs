@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Projeto-IrrigaMais-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+646673c148fa1733426fa14b1c8010a78edf6cc8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6fb9db9ea361898a7663332871c5a4eb2423ed5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Projeto-IrrigaMais-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Projeto-IrrigaMais-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

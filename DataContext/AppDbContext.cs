@@ -11,9 +11,9 @@ namespace Projeto_IrrigaMais_API.DataContext
         }
 
         public DbSet<Planta> Plantas { get; set; }
-        public DbSet<NecessidadeHidrica> necessidadesHidricas { get; set; }
         public DbSet<Sensor> Sensores { get; set; }
-        public DbSet<TipoSensor> tipoSensores { get; set; }
+        public DbSet<NecessidadeHidrica> necessidadesHidricas { get; set; }
+        public DbSet<TipoSensor> TipoSensores { get; set; }
 
     }
 }

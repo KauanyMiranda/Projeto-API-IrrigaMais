@@ -1,5 +1,4 @@
-﻿using Projeto_IrrigaMais_API.Models;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace Projeto_IrrigaMais_API.Models
@@ -11,12 +10,13 @@ namespace Projeto_IrrigaMais_API.Models
         public int Id { get; set; }
 
         [Column("nome")]
-        public required string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Column("unidade_medida")]
-        public required string UnidadeMedida { get; set; }
+        public string? UnidadeMedida { get; set; }
 
         [JsonIgnore]
-        public ICollection<Sensor> Sensores { get; set; } =  new List<Sensor>();
+        public ICollection<Sensor> Sensores { get; set; } = new List<Sensor>();
+
     }
 }

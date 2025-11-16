@@ -1,0 +1,27 @@
+# Build Folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node / npm (se tiver front)
+node_modules/
+
+# Azure / publish
+*.Publish.xml
+*.azurePubxml

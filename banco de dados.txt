@@ -1,0 +1,118 @@
+CREATE DATABASE IF NOT EXISTS irriga_mais;
+drop database irriga_mais;
+
+USE irriga_mais;
+
+CREATE TABLE IF NOT EXISTS planta(
+	id_planta INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome_planta VARCHAR(255) NOT NULL,
+    fk_necessidade_hidrica_id INT NOT NULL,
+    fk_id_usuario INT NOT NULL,
+    fk_id_rotina INT NOT NULL,
+    FOREIGN KEY (fk_necessidade_hidrica_id) REFERENCES necessidade_hidrica(id_necessidade_hidrica),
+    FOREIGN KEY (fk_id_usuario) REFERENCES usuarios (id_usuario),
+	FOREIGN KEY (fk_id_rotina) REFERENCES rotinas (id_rotina)
+);
+CREATE TABLE IF NOT EXISTS usuarios(
+id_usuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome_usuario VARCHAR(50) NOT NULL,
+email_usuario VARCHAR(100) NOT NULL,
+senha_usuario VARCHAR(50) NOT NULL,
+fk_id_relatorio INT NOT NULL,
+FOREIGN KEY (fk_id_relatorio) REFERENCES relatorios (id_relatorio)
+);
+CREATE TABLE IF NOT EXISTS relatorios(
+id_relatorio INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+tipo_relatorio VARCHAR(20),
+dt_geracao datetime,
+dt_inicial datetime not null,
+dt_final datetime not null
+);
+
+CREATE TABLE IF NOT EXISTS rotinas(
+id_rotina INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+tipo_execucao VARCHAR (20) NOT NULL,
+horario datetime NOT NULL,
+frequencia INT NOT NULL,
+nome_rotina VARCHAR(20) NOT NULL,
+dia_seg boolean, 
+dia_ter boolean,
+dia_qua boolean,
+dia_qui boolean,
+dia_sex boolean,
+dia_sab boolean,
+dia_dom boolean
+);
+
+select * from relatorios;
+
+CREATE TABLE IF NOT EXISTS necessidade_hidrica(
+	id_necessidade_hidrica INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    qtd_litros DOUBLE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tipo_sensor(
+	id_tipo_sensor INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(225) NOT NULL,
+    unidade_medida VARCHAR(5)
+);
+
+CREATE TABLE IF NOT EXISTS sensor(
+	id_sensor INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    localizacao VARCHAR(255) NOT NULL,
+    status_sensor ENUM('Ativo', 'Inativo'),
+    fk_tipo_sensor_id INT NOT NULL,
+    FOREIGN KEY (fk_tipo_sensor_id) REFERENCES tipo_sensor(id_tipo_sensor)
+);
+
+CREATE TABLE IF NOT EXISTS leitura_sensor(
+	id_leitura_sensor INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    dt_leitura DATETIME NOT NULL,
+    valor DOUBLE NOT NULL,
+    fk_sensor_id INT NOT NULL,
+    FOREIGN KEY (fk_sensor_id) REFERENCES sensor(id_sensor)
+);
+
+INSERT INTO leitura_sensor (dt_leitura, valor, fk_sensor_id)
+VALUES
+('2025-01-10 08:30:00', 23.7, 1);
+
+INSERT INTO leitura_sensor (dt_leitura, valor, fk_sensor_id)
+VALUES
+('2025-01-10 08:31:00', 24.1, 1);
+
+INSERT INTO leitura_sensor (dt_leitura, valor, fk_sensor_id)
+VALUES
+('2025-01-10 12:15:00', 18.9, 1);
+
+INSERT INTO leitura_sensor (dt_leitura, valor, fk_sensor_id)
+VALUES
+('2025-01-10 14:00:00', 31.4, 1);
+
+INSERT INTO tipo_sensor (id_tipo_sensor, nome, unidade_medida)
+VALUES
+(1, 'Sensor de Umidade do Solo', '%'),
+(2, 'Sensor de Temperatura', '°C'),
+(3, 'Sensor de Luminosidade', 'lux'),
+(4, 'Sensor de pH', 'pH'),
+(5, 'Sensor de Condutividade Elétrica', 'mS/cm'),
+(6, 'Sensor de Nível de Água', 'cm'),
+(7, 'Sensor de Chuva', 'mm'),
+(8, 'Sensor de Pressão da Água', 'bar'),
+(9, 'Sensor de Vazão', 'L/min');
+INSERT INTO necessidade_hidrica (id_necessidade_hidrica, nome, qtd_litros)
+VALUES
+(1, 'Baixa', 0.5),
+(2, 'Média', 1.0),
+(3, 'Alta', 2.0),
+(4, 'Muito Alta', 3.5),
+(5, 'Cacto / Suculentas', 0.2),
+(6, 'Flores Tropicais', 1.8),
+(7, 'Hortaliças Pequenas', 1.2),
+(8, 'Árvores Jovens', 5.0),
+(9, 'Árvores Adultas', 10.0);
+
+
+select * from sensor;

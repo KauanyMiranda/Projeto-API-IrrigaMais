@@ -1,40 +1,40 @@
 [
   {
-    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.LeituraSensorController",
     "Method": "BuscarTodos",
-    "RelativePath": "",
+    "RelativePath": "leituraSensor",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "buscar",
-        "Type": "System.String",
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.LeituraSensorController",
     "Method": "Criar",
-    "RelativePath": "",
+    "RelativePath": "leituraSensor",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "novaPlanta",
-        "Type": "Projeto_IrrigaMais_API.Models.Dtos.PlantaDto",
+        "Name": "novaLeitura",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.LeituraSensorDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.LeituraSensorController",
     "Method": "BuscarPorId",
-    "RelativePath": "{id}",
+    "RelativePath": "leituraSensor/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -48,9 +48,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.LeituraSensorController",
     "Method": "Atualizar",
-    "RelativePath": "{id}",
+    "RelativePath": "leituraSensor/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -61,17 +61,17 @@
         "IsRequired": true
       },
       {
-        "Name": "atualizarPlanta",
-        "Type": "Projeto_IrrigaMais_API.Models.Dtos.PlantaDto",
+        "Name": "atualizarLeitura",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.LeituraSensorDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.LeituraSensorController",
     "Method": "Remover",
-    "RelativePath": "{id}",
+    "RelativePath": "leituraSensor/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -92,6 +92,330 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.NecessidadeHidricaController",
+    "Method": "Criar",
+    "RelativePath": "necessidadeHidrica",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novaNecessidade",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.NecessidadeHidricaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.NecessidadeHidricaController",
+    "Method": "BuscarPorId",
+    "RelativePath": "necessidadeHidrica/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.NecessidadeHidricaController",
+    "Method": "Atualizar",
+    "RelativePath": "necessidadeHidrica/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "atualizarNecessidade",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.NecessidadeHidricaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.NecessidadeHidricaController",
+    "Method": "Remover",
+    "RelativePath": "necessidadeHidrica/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "Method": "BuscarTodos",
+    "RelativePath": "planta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "Method": "Criar",
+    "RelativePath": "planta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novaPlanta",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.PlantaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "Method": "BuscarPorId",
+    "RelativePath": "planta/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "Method": "Atualizar",
+    "RelativePath": "planta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "atualizarPlanta",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.PlantaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.PlantaController",
+    "Method": "Remover",
+    "RelativePath": "planta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RelatorioController",
+    "Method": "BuscarTodos",
+    "RelativePath": "relatorios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RelatorioController",
+    "Method": "Criar",
+    "RelativePath": "relatorios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoRelatorio",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.RelatorioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RelatorioController",
+    "Method": "BuscarPorId",
+    "RelativePath": "relatorios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RelatorioController",
+    "Method": "Atualizar",
+    "RelativePath": "relatorios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "atualizarRelatorio",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.RelatorioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RelatorioController",
+    "Method": "Remover",
+    "RelativePath": "relatorios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RotinaController",
+    "Method": "BuscarTodos",
+    "RelativePath": "rotinas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RotinaController",
+    "Method": "Criar",
+    "RelativePath": "rotinas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novaRotina",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.RotinaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RotinaController",
+    "Method": "BuscarPorId",
+    "RelativePath": "rotinas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RotinaController",
+    "Method": "Atualizar",
+    "RelativePath": "rotinas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "atualizarRotina",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.RotinaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.RotinaController",
+    "Method": "Remover",
+    "RelativePath": "rotinas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -121,6 +445,22 @@
       {
         "Name": "novoSensor",
         "Type": "Projeto_IrrigaMais_API.Models.Dtos.SensorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.SensorController",
+    "Method": "BuscarPorId",
+    "RelativePath": "sensor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -171,6 +511,160 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.TipoSensorController",
+    "Method": "Criar",
+    "RelativePath": "tipoSensor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoTipoSensor",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.TipoSensorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.TipoSensorController",
+    "Method": "BuscarPorId",
+    "RelativePath": "tipoSensor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.TipoSensorController",
+    "Method": "Atualizar",
+    "RelativePath": "tipoSensor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "atualizarTipoSensor",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.TipoSensorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.TipoSensorController",
+    "Method": "Remover",
+    "RelativePath": "tipoSensor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.UsuarioController",
+    "Method": "BuscarTodos",
+    "RelativePath": "usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.UsuarioController",
+    "Method": "Criar",
+    "RelativePath": "usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoUsuario",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.UsuarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.UsuarioController",
+    "Method": "BuscarPorId",
+    "RelativePath": "usuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.UsuarioController",
+    "Method": "Atualizar",
+    "RelativePath": "usuario/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "atualizarUsuario",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.UsuarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Projeto_IrrigaMais_API.Controllers.UsuarioController",
+    "Method": "Remover",
+    "RelativePath": "usuario/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

@@ -25,7 +25,7 @@ namespace Projeto_IrrigaMais_API.Controllers
             )
         {
             var query = _context.Sensores.AsQueryable();
-            if ( buscar is not null)
+            if (buscar is not null)
             {
                 query = query.Where(x => x.Nome.Contains(buscar));
 
@@ -34,15 +34,33 @@ namespace Projeto_IrrigaMais_API.Controllers
 
             var sensores = await query
                 .Include(t => t.TipoSensor)
-                .Select(s => new 
-            { 
-                s.Nome,
-                s.Localizacao,
-                TipoSensor = new { s.TipoSensor.Nome },
-                s.StatusSensor
-            }).ToListAsync();
+                .Include(u => u.Usuario)
+                .Select(s => new
+                {
+                    s.Nome,
+                    s.Localizacao,
+                    TipoSensor = new { s.TipoSensor.Nome },
+                    Usuario = new {s.Usuario.Nome},
+                    s.StatusSensor
+                }).ToListAsync();
 
             return Ok(sensores);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> BuscarPorId(int id)
+        {
+            var sensor = await _context.Sensores
+                .Include(t => t.TipoSensor)
+                .Include(u => u.Usuario)
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            if (sensor is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(sensor);
         }
 
         [HttpPost]
@@ -53,16 +71,26 @@ namespace Projeto_IrrigaMais_API.Controllers
                 .TipoSensores
                 .FirstOrDefaultAsync(x => x.Id == novoSensor.TipoSensorId);
 
+            var usuario = await _context
+                .Usuarios
+                .FirstOrDefaultAsync(x => x.Id == novoSensor.UsuarioId);
+
             if (tipoSensor is null)
             {
                 return NotFound("Tipo de Sensor não encontrado");
+            }
+
+            if (usuario is null)
+            {
+                return NotFound("Usuário não encontrado");
             }
 
             var sensor = new Sensor()
             {
                 Nome = novoSensor.Nome,
                 Localizacao = novoSensor.Localizacao,
-                TipoSensorId = novoSensor.TipoSensorId
+                TipoSensorId = novoSensor.TipoSensorId,
+                UsuarioId = novoSensor.UsuarioId
             };
 
             await _context.Sensores.AddAsync(sensor);
@@ -74,9 +102,9 @@ namespace Projeto_IrrigaMais_API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Atualizar(int id, [FromBody] SensorDto atualizarSensor)
         {
-            var sensor = await _context.Sensores.FirstOrDefaultAsync(x =>  x.Id == id);
+            var sensor = await _context.Sensores.FirstOrDefaultAsync(x => x.Id == id);
 
-            if(sensor is null)
+            if (sensor is null)
             {
                 return NotFound();
             }
@@ -97,7 +125,7 @@ namespace Projeto_IrrigaMais_API.Controllers
         {
             var sensor = await _context.Sensores.FirstOrDefaultAsync(x => x.Id == id);
 
-            if(sensor is null)
+            if (sensor is null)
             {
                 return NotFound();
             }

@@ -19,9 +19,14 @@ namespace Projeto_IrrigaMais_API.Models
         public string StatusSensor { get; set; } = "Ativo";
 
         public virtual TipoSensor? TipoSensor { get; set; }
+        public virtual Usuario? Usuario { get; set; }
 
         [JsonIgnore]
         [Column("fk_tipo_sensor_id")]
         public int TipoSensorId { get; set; }
+
+        [JsonIgnore]
+        [Column("fk_usuario_id")]
+        public int UsuarioId { get; set; }
     }
 }

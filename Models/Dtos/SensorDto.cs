@@ -11,6 +11,9 @@ namespace Projeto_IrrigaMais_API.Models.Dtos
         public required string Localizacao { get; set; }
 
         [Required(ErrorMessage = "O tipo do sensor é obrigatório")]
-        public int TipoSensorId {  get; set; }
+        public int TipoSensorId { get; set; }
+
+        [Required(ErrorMessage = "O usuário é obrigatório")]
+        public int UsuarioId { get; set; }
     }
 }

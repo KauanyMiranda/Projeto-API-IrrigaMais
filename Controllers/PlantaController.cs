@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Projeto_IrrigaMais_API.Controllers
 {
-    [Route("/")]
+    [Route("/planta")]
     [ApiController]
     public class PlantaController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public PlantaController(AppDbContext context) 
+        public PlantaController(AppDbContext context)
         {
             _context = context;
         }
@@ -24,9 +24,9 @@ namespace Projeto_IrrigaMais_API.Controllers
             [FromQuery] string? buscar
             )
         {
-            var query =_context.Plantas.AsQueryable();
+            var query = _context.Plantas.AsQueryable();
 
-            if (buscar is not null) 
+            if (buscar is not null)
             {
                 query = query.Where(x => x.Nome.Contains(buscar));
 
@@ -35,15 +35,33 @@ namespace Projeto_IrrigaMais_API.Controllers
 
             var plantas = await query
                 .Include(n => n.NecessidadeHidrica)
-                .Select(p => new 
+                .Include(r => r.Rotina)
+                .Include(s => s.Sensor)
+                .Include(u => u.Usuario)
+                .Select(p => new
                 {
-                    p.Id, 
+                    p.Id,
                     p.Nome,
-                    NecessidadeHidrica = new {p.NecessidadeHidrica.Nome}
+                    NecessidadeHidrica = new { p.NecessidadeHidrica.Nome },
+                    Rotina = new { 
+                        p.Rotina.nome_rotina,
+                        p.Rotina.tipo_execucao,
+                        p.Rotina.horario,
+                        p.Rotina.frequencia,
+                        p.Rotina.dia_seg,
+                        p.Rotina.dia_ter,
+                        p.Rotina.dia_qua,
+                        p.Rotina.dia_qui,
+                        p.Rotina.dia_sex,
+                        p.Rotina.dia_sab,
+                        p.Rotina.dia_dom
+                    },
+                    Sensor = new { p.Sensor.Nome },
+                    Usuario = new { p.Usuario.Nome }
                 })
                 .ToListAsync();
 
-            return Ok(plantas);          
+            return Ok(plantas);
         }
 
         [HttpGet("{id}")]
@@ -51,6 +69,8 @@ namespace Projeto_IrrigaMais_API.Controllers
         {
             var planta = await _context.Plantas
                 .Include(n => n.NecessidadeHidrica)
+                .Include(s => s.Sensor)
+                .Include(u => u.Usuario)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             if (planta is null)
@@ -68,15 +88,44 @@ namespace Projeto_IrrigaMais_API.Controllers
                 .necessidadesHidricas
                 .FirstOrDefaultAsync(x => x.Id == novaPlanta.NecessidadeHidricaId);
 
+            var sensor = await _context
+                .Sensores
+                .FirstOrDefaultAsync(x => x.Id == novaPlanta.SensorId);
+
+            var usuario = await _context
+                .Usuarios
+                .FirstOrDefaultAsync(x => x.Id == novaPlanta.UsuarioId);
+            var rotina = await _context
+                .Rotinas
+                .FirstOrDefaultAsync(x => x.Id == novaPlanta.RotinaId);
+
             if (necessidadeHidrica is null)
             {
                 return NotFound("Necessidade Hídrica não encontrada");
             }
 
+            if (sensor is null)
+            {
+                return NotFound("Sensor não encontrado");
+            }
+
+            if (usuario is null)
+            {
+                return NotFound("Usuário não encontrado");
+            }
+
+            if (rotina is null)
+            {
+                return NotFound("Rotina não encontrada");
+            }
+
             var planta = new Planta()
             {
                 Nome = novaPlanta.Nome,
-                NecessidadeHidricaId = novaPlanta.NecessidadeHidricaId
+                NecessidadeHidricaId = novaPlanta.NecessidadeHidricaId,
+                RotinaId = novaPlanta.RotinaId,
+                SensorId = novaPlanta.SensorId,
+                UsuarioId = novaPlanta.UsuarioId
             };
 
             await _context.Plantas.AddAsync(planta);
@@ -97,6 +146,8 @@ namespace Projeto_IrrigaMais_API.Controllers
 
             planta.Nome = atualizarPlanta.Nome;
             planta.NecessidadeHidricaId = atualizarPlanta.NecessidadeHidricaId;
+            planta.SensorId = atualizarPlanta.SensorId;
+            planta.RotinaId = atualizarPlanta.RotinaId;
 
             _context.Plantas.Update(planta);
             await _context.SaveChangesAsync();
@@ -105,7 +156,7 @@ namespace Projeto_IrrigaMais_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Remover(int id) 
+        public async Task<IActionResult> Remover(int id)
         {
             var planta = await _context.Plantas.FirstOrDefaultAsync(x => x.Id == id);
 

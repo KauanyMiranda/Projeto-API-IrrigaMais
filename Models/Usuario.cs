@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Projeto_IrrigaMais_API.Models
 {
-    [Table("usuario")]
+    [Table("usuarios")]
     public class Usuario
     {
         [Column("id_usuario")]

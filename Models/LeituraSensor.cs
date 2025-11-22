@@ -21,5 +21,7 @@ namespace Projeto_IrrigaMais_API.Models
         [JsonIgnore]
         [Column("fk_sensor_id")]
         public int SensorId { get; set; }
+
+        public ICollection<Irrigacao> Irrigacao { get; set; } = new List<Irrigacao>();
     }
 }

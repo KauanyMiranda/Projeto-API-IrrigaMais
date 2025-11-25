@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS tipo_sensor(
 CREATE TABLE IF NOT EXISTS rotina(
 	id_rotina INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome_rotina VARCHAR(255) NOT NULL,
-	tipo_execucao ENUM("Automática", "Inteligente"),
+	tipo_execucao ENUM("Automático", "Inteligente"),
 	horario VARCHAR(10) NOT NULL,
 	frequencia INT NOT NULL,
 	dia_seg BOOLEAN, 
@@ -35,6 +35,23 @@ CREATE TABLE IF NOT EXISTS rotina(
 	dia_sab BOOLEAN,
 	dia_dom BOOLEAN
 );
+
+CREATE TABLE IF NOT EXISTS api(
+	id_api INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cidade VARCHAR(50) NOT NULL,
+    pais VARCHAR(50) NOT NULL,
+    descricao VARCHAR(100),
+    icone VARCHAR(100),
+    temp DOUBLE NOT NULL,
+    temp_max DOUBLE NOT NULL,
+    temp_min DOUBLE NOT NULL,
+    previsao DOUBLE NOT NULL,
+    umidade DOUBLE NOT NULL,
+    vento DOUBLE NOT NULL,
+    dt_consulta DATETIME NOT NULL
+);
+
+drop table api;
 
 CREATE TABLE IF NOT EXISTS relatorio(
 	id_relatorio INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -57,6 +74,7 @@ CREATE TABLE IF NOT EXISTS sensor(
     FOREIGN KEY (fk_usuario_id) REFERENCES usuario(id_usuario)
 );
 
+
 CREATE TABLE IF NOT EXISTS planta(
 	id_planta INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome_planta VARCHAR(255) NOT NULL,
@@ -77,6 +95,26 @@ CREATE TABLE IF NOT EXISTS leitura_sensor(
     fk_sensor_id INT NOT NULL,
     FOREIGN KEY (fk_sensor_id) REFERENCES sensor(id_sensor)
 ); 
+
+CREATE TABLE IF NOT EXISTS irrigacao(
+	id_irrigacao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    consumo_hidrico DOUBLE NOT NULL,
+    dt_inicial DATETIME NOT NULL,
+    dt_final DATETIME NOT NULL,
+    fk_leitura_sensor_id INT NOT NULL,
+    fk_api_id INT NOT NULL,
+    FOREIGN KEY (fk_leitura_sensor_id) REFERENCES leitura_sensor(id_leitura_sensor),
+    FOREIGN KEY (fk_api_id) REFERENCES api(id_api)
+);
+
+CREATE TABLE rotina_irrigacao(
+	id_rotina_irrigacao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	fk_rotina_id INT NOT NULL,
+    fk_irrigacao_id INT NOT NULL,
+    
+    FOREIGN KEY (fk_rotina_id) REFERENCES rotina(id_rotina),
+    FOREIGN KEY (fk_irrigacao_id) REFERENCES irrigacao(id_irrigacao)
+);
 
 INSERT INTO necessidade_hidrica(nome, qtd_litros) VALUES 
 	("Muito Baixa", 0.5),

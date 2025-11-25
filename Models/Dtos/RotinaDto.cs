@@ -22,5 +22,6 @@ namespace Projeto_IrrigaMais_API.Models.Dtos
         public bool dia_sex { get; set; }
         public bool dia_sab { get; set; }
         public bool dia_dom { get; set; }
+
     }
 }

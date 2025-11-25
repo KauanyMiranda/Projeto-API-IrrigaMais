@@ -18,6 +18,13 @@ namespace Projeto_IrrigaMais_API.DataContext
         public DbSet<TipoSensor> TipoSensores { get; set; }
         public DbSet<LeituraSensor> LeiturasSensores { get; set; }
         public DbSet<Relatorio> Relatorios { get; set; }
+        public DbSet<Irrigacao> Irrigacoes { get; set; }
+        public DbSet<Api> Apis { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
 
     }
 }

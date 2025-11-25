@@ -42,6 +42,7 @@ namespace Projeto_IrrigaMais_API.Models
         public bool dia_dom { get; set; }
 
         public ICollection<Planta> Plantas { get; set; } = new List<Planta>();
+        public ICollection<RotinaIrrigacao> RotinasIrrigacoes { get; set; } = [];
 
     }
 }

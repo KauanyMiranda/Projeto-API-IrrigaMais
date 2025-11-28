@@ -25,27 +25,30 @@ namespace Projeto_IrrigaMais_API.Controllers
             )
         {
             var query = _context.Rotinas.AsQueryable();
-            if ( buscar is not null)
+            if (buscar is not null)
             {
-                query = query.Where(x => x.nome_rotina.Contains(buscar));
+                query = query.Where(x => x.NomeRotina.Contains(buscar));
 
                 return Ok(query);
             }
 
-            var rotinas = await query.Select(r => new 
-            { r.Id,
-              r.nome_rotina,
-              r.tipo_execucao,
-              r.horario,
-              r.frequencia,
-              r.dia_seg,
-              r.dia_ter,
-              r.dia_qua,
-              r.dia_qui,
-              r.dia_sex,
-              r.dia_sab,
-              r.dia_dom
-            }).ToListAsync();
+            var rotinas = await query
+                .Include(u => u.Usuario)
+                .Select(r => new
+                {   r.Id,
+                    r.NomeRotina,
+                    r.TipoExecucao,
+                    r.Horario,
+                    r.Frequencia,
+                    r.DiaSeg,
+                    r.DiaTer,
+                    r.DiaQua,
+                    r.DiaQui,
+                    r.DiaSex,
+                    r.DiaSab,
+                    r.DiaDom,
+                    Usuario = new { r.Usuario.Nome }
+                }).ToListAsync();
 
             return Ok(rotinas);
         }
@@ -71,17 +74,18 @@ namespace Projeto_IrrigaMais_API.Controllers
 
             var rotina = new Rotina()
             {
-                nome_rotina = novaRotina.nome_rotina,
-                tipo_execucao = novaRotina.tipo_execucao,
-                horario = novaRotina.horario,
-                frequencia = novaRotina.frequencia,
-                dia_seg = novaRotina.dia_seg,
-                dia_ter = novaRotina.dia_ter,
-                dia_qua = novaRotina.dia_qua,
-                dia_qui = novaRotina.dia_qui,
-                dia_sex = novaRotina.dia_sex,
-                dia_sab = novaRotina.dia_sab,
-                dia_dom = novaRotina.dia_dom
+                NomeRotina = novaRotina.NomeRotina,
+                TipoExecucao = novaRotina.TipoExecucao,
+                Horario = novaRotina.Horario,
+                Frequencia  = novaRotina.Frequencia,
+                DiaSeg = novaRotina.DiaSeg,
+                DiaTer = novaRotina.DiaTer,
+                DiaQua = novaRotina.DiaQua,
+                DiaQui = novaRotina.DiaQui,
+                DiaSex = novaRotina.DiaSex,
+                DiaSab = novaRotina.DiaSab,
+                DiaDom = novaRotina.DiaDom,
+                UsuarioId = novaRotina.UsuarioId
             };
 
             await _context.Rotinas.AddAsync(rotina);
@@ -102,18 +106,18 @@ namespace Projeto_IrrigaMais_API.Controllers
                 return NotFound();
             }
 
-            rotina.nome_rotina = atualizarRotina.nome_rotina;
-            rotina.tipo_execucao = atualizarRotina.tipo_execucao;
-            rotina.horario = atualizarRotina.horario;
-            rotina.frequencia = atualizarRotina.frequencia;
-            rotina.dia_seg = atualizarRotina.dia_seg;
-            rotina.dia_ter = atualizarRotina.dia_ter;
-            rotina.dia_qua = atualizarRotina.dia_qua;
-            rotina.dia_qui = atualizarRotina.dia_qui;
-            rotina.dia_sex = atualizarRotina.dia_sex;
-            rotina.dia_sab = atualizarRotina.dia_sab;
-            rotina.dia_dom = atualizarRotina.dia_dom;
-
+            rotina.NomeRotina = atualizarRotina.NomeRotina;
+            rotina.TipoExecucao = atualizarRotina.TipoExecucao;
+            rotina.Horario = atualizarRotina.Horario;
+            rotina.Frequencia = atualizarRotina.Frequencia;
+            rotina.DiaSeg = atualizarRotina.DiaSeg;
+            rotina.DiaTer = atualizarRotina.DiaTer;
+            rotina.DiaQua = atualizarRotina.DiaQua;
+            rotina.DiaQui = atualizarRotina.DiaQui;
+            rotina.DiaSex = atualizarRotina.DiaSex;
+            rotina.DiaSab = atualizarRotina.DiaSab;
+            rotina.DiaDom = atualizarRotina.DiaDom;
+            rotina.UsuarioId = atualizarRotina.UsuarioId;
 
             _context.Rotinas.Update(rotina);
             await _context.SaveChangesAsync();

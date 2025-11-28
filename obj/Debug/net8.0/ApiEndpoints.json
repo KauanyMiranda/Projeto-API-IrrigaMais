@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "novaApi",
-        "Type": "Projeto_IrrigaMais_API.Models.Dtos.ApiDto",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.DadosApiDto",
         "IsRequired": true
       }
     ],
@@ -62,7 +62,7 @@
       },
       {
         "Name": "atualizarApi",
-        "Type": "Projeto_IrrigaMais_API.Models.Dtos.ApiDto",
+        "Type": "Projeto_IrrigaMais_API.Models.Dtos.DadosApiDto",
         "IsRequired": true
       }
     ],
@@ -186,9 +186,9 @@
   },
   {
     "ContainingType": "Projeto_IrrigaMais_API.Controllers.IrrigacaoController",
-    "Method": "RemoverUsuarioPorId",
+    "Method": "RemoverRotinaPorId",
     "RelativePath": "irrigacao/{id}/remover-rotina",
-    "HttpMethod": "POST",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

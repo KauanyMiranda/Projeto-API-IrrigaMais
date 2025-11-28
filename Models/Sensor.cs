@@ -22,11 +22,11 @@ namespace Projeto_IrrigaMais_API.Models
         public virtual Usuario? Usuario { get; set; }
 
         [JsonIgnore]
-        [Column("fk_tipo_sensor_id")]
+        [Column("id_tipo_sensor_fk")]
         public int TipoSensorId { get; set; }
 
         [JsonIgnore]
-        [Column("fk_usuario_id")]
+        [Column("id_usuario_fk")]
         public int UsuarioId { get; set; }
     }
 }

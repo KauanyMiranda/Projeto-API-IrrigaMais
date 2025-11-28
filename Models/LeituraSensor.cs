@@ -19,7 +19,7 @@ namespace Projeto_IrrigaMais_API.Models
         public virtual Sensor? Sensor { get; set; }
 
         [JsonIgnore]
-        [Column("fk_sensor_id")]
+        [Column("id_sensor_fk")]
         public int SensorId { get; set; }
     }
 }

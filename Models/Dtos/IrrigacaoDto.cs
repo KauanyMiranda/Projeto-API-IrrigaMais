@@ -17,7 +17,7 @@ namespace Projeto_IrrigaMais_API.Models.Dtos
         [Required(ErrorMessage = "O ID da leitura do sensor é obrigatório")]
         public int LeituraSensorId { get; set; }
 
-        [Required(ErrorMessage = "O ID da API é obrigatório")]
-        public int ApiId { get; set; }
+        [Required(ErrorMessage = "O ID dos Dados da API é obrigatório")]
+        public int DadosApiId { get; set; }
     }
 }

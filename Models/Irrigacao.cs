@@ -19,15 +19,15 @@ namespace Projeto_IrrigaMais_API.Models
         public DateTime DtFinal { get; set; } = DateTime.Now;
 
         public virtual LeituraSensor? LeituraSensor { get; set; }
-        public virtual Api? Api { get; set; }
+        public virtual DadosApi? Api { get; set; }
 
         [JsonIgnore]
-        [Column("fk_leitura_sensor_id")]
+        [Column("id_leitura_sensor_fk")]
         public int LeituraSensorId { get; set; }
 
         [JsonIgnore]
-        [Column("fk_api_id")]
-        public int ApiId { get; set; }
+        [Column("id_dados_api_fk")]
+        public int DadosApiId { get; set; }
 
         public ICollection<RotinaIrrigacao> RotinasIrrigacoes { get; set; } = [];
     }

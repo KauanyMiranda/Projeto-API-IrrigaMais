@@ -24,5 +24,8 @@ namespace Projeto_IrrigaMais_API.Models
 
         [JsonIgnore]
         public ICollection<Sensor> Sensores { get; set; } = new List<Sensor>();
+
+        [JsonIgnore]
+        public ICollection<Rotina> Rotinas { get; set; } = new List<Rotina>();
     }
 }

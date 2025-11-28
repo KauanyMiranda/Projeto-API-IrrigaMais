@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Projeto_IrrigaMais_API.Models
 {
@@ -9,37 +10,42 @@ namespace Projeto_IrrigaMais_API.Models
         public int Id { get; set; }
 
         [Column("nome_rotina")]
-        public required string nome_rotina { get; set; }
+        public required string NomeRotina { get; set; }
 
         [Column("tipo_execucao")]
-        public required string tipo_execucao { get; set; }
+        public required string TipoExecucao { get; set; }
 
         [Column("horario")]
-        public required string horario { get; set; }
+        public required string Horario { get; set; }
 
         [Column("frequencia")]
-        public required int frequencia { get; set; }
+        public required int Frequencia { get; set; }
 
         [Column("dia_seg")]
-        public bool dia_seg { get; set; }
+        public bool DiaSeg { get; set; }
 
         [Column("dia_ter")]
-        public bool dia_ter { get; set; }
+        public bool DiaTer { get; set; }
 
         [Column("dia_qua")]
-        public bool dia_qua { get; set; }
+        public bool DiaQua { get; set; }
 
         [Column("dia_qui")]
-        public bool dia_qui { get; set; }
+        public bool DiaQui { get; set; }
 
         [Column("dia_sex")]
-        public bool dia_sex { get; set; }
+        public bool DiaSex { get; set; }
 
         [Column("dia_sab")]
-        public bool dia_sab { get; set; }
+        public bool DiaSab { get; set; }
 
         [Column("dia_dom")]
-        public bool dia_dom { get; set; }
+        public bool DiaDom { get; set; }
+        public virtual Usuario? Usuario { get; set; }
+
+        [JsonIgnore]
+        [Column("id_usuario_fk")]
+        public int UsuarioId { get; set; }
 
         public ICollection<Planta> Plantas { get; set; } = new List<Planta>();
         public ICollection<RotinaIrrigacao> RotinasIrrigacoes { get; set; } = [];

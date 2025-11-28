@@ -2,7 +2,7 @@
 
 namespace Projeto_IrrigaMais_API.Models.Dtos
 {
-    public class ApiDto
+    public class DadosApiDto
     {
         [Required(ErrorMessage = "A cidade é obrigatória")]
         public required string Cidade { get; set; }

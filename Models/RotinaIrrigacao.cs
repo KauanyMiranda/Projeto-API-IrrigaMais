@@ -11,13 +11,13 @@ namespace Projeto_IrrigaMais_API.Models
 
         public virtual Rotina? Rotina { get; set; }
 
-        [Column("fk_rotina_id")]
+        [Column("id_rotina_fk")]
         [JsonIgnore]
         public int RotinaId { get; set; }
 
         public virtual Irrigacao? Irrigacao { get; set; }
       
-        [Column("fk_irrigacao_id")]
+        [Column("id_irrigacao_fk")]
         [JsonIgnore]
         public int IrrigacaoId { get; set; }
     }

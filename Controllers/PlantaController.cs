@@ -44,17 +44,17 @@ namespace Projeto_IrrigaMais_API.Controllers
                     p.Nome,
                     NecessidadeHidrica = new { p.NecessidadeHidrica.Nome },
                     Rotina = new { 
-                        p.Rotina.nome_rotina,
-                        p.Rotina.tipo_execucao,
-                        p.Rotina.horario,
-                        p.Rotina.frequencia,
-                        p.Rotina.dia_seg,
-                        p.Rotina.dia_ter,
-                        p.Rotina.dia_qua,
-                        p.Rotina.dia_qui,
-                        p.Rotina.dia_sex,
-                        p.Rotina.dia_sab,
-                        p.Rotina.dia_dom
+                        p.Rotina.NomeRotina,
+                        p.Rotina.TipoExecucao,
+                        p.Rotina.Horario,
+                        p.Rotina.Frequencia,
+                        p.Rotina.DiaSeg,
+                        p.Rotina.DiaTer,
+                        p.Rotina.DiaQua,
+                        p.Rotina.DiaQui,
+                        p.Rotina.DiaSex,
+                        p.Rotina.DiaSab,
+                        p.Rotina.DiaDom
                     },
                     Sensor = new { p.Sensor.Nome },
                     Usuario = new { p.Usuario.Nome }

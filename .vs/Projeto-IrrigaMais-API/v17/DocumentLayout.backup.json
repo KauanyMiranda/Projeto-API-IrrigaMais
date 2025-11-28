@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\models\\rotina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:models\\rotina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\models\\irrigacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:models\\irrigacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\controllers\\irrigacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:controllers\\irrigacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\models\\dtos\\irrigacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:models\\dtos\\irrigacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\models\\dtos\\rotinadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:models\\dtos\\rotinadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\models\\rotinairrigacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:models\\rotinairrigacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|c:\\users\\kauan\\downloads\\projeto-irrigamais-api\\models\\dtos\\rotinairrigacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCCD2C78-97E7-43E0-AEFE-992892512D56}|Projeto-IrrigaMais-API.csproj|solutionrelative:models\\dtos\\rotinairrigacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,92 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Rotina.cs",
-              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Rotina.cs",
-              "RelativeDocumentMoniker": "Models\\Rotina.cs",
-              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Rotina.cs",
-              "RelativeToolTip": "Models\\Rotina.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAkwC8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T18:06:13.479Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RotinaDto.cs",
-              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\RotinaDto.cs",
-              "RelativeDocumentMoniker": "Models\\Dtos\\RotinaDto.cs",
-              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\RotinaDto.cs",
-              "RelativeToolTip": "Models\\Dtos\\RotinaDto.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:29:33.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IrrigacaoDto.cs",
-              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\IrrigacaoDto.cs",
-              "RelativeDocumentMoniker": "Models\\Dtos\\IrrigacaoDto.cs",
-              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\IrrigacaoDto.cs",
-              "RelativeToolTip": "Models\\Dtos\\IrrigacaoDto.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA9wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:21:20.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RotinaIrrigacaoDto.cs",
-              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\RotinaIrrigacaoDto.cs",
-              "RelativeDocumentMoniker": "Models\\Dtos\\RotinaIrrigacaoDto.cs",
-              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Dtos\\RotinaIrrigacaoDto.cs",
-              "RelativeToolTip": "Models\\Dtos\\RotinaIrrigacaoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:21:01.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RotinaIrrigacao.cs",
-              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\RotinaIrrigacao.cs",
-              "RelativeDocumentMoniker": "Models\\RotinaIrrigacao.cs",
-              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\RotinaIrrigacao.cs",
-              "RelativeToolTip": "Models\\RotinaIrrigacao.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBEAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:20:26.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Irrigacao.cs",
-              "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Irrigacao.cs",
-              "RelativeDocumentMoniker": "Models\\Irrigacao.cs",
-              "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Models\\Irrigacao.cs",
-              "RelativeToolTip": "Models\\Irrigacao.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwCEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:19:50.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "IrrigacaoController.cs",
               "DocumentMoniker": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\IrrigacaoController.cs",
               "RelativeDocumentMoniker": "Controllers\\IrrigacaoController.cs",
               "ToolTip": "C:\\Users\\kauan\\Downloads\\Projeto-IrrigaMais-API\\Controllers\\IrrigacaoController.cs",
               "RelativeToolTip": "Controllers\\IrrigacaoController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAQwFYAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAALwAAAAAAAAAAAAuwL0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:12:23.964Z",
+              "WhenOpened": "2025-11-28T17:22:44.62Z",
               "EditorCaption": ""
             }
           ]

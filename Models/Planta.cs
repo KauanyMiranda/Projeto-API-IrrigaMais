@@ -19,19 +19,19 @@ namespace Projeto_IrrigaMais_API.Models
         public virtual Sensor? Sensor { get; set; }
 
         [JsonIgnore]
-        [Column("fk_necessidade_hidrica_id")]
+        [Column("id_necessidade_hidrica_fk")]
         public int NecessidadeHidricaId { get; set; }
 
         [JsonIgnore]
-        [Column("fk_usuario_id")]
+        [Column("id_usuario_fk")]
         public int UsuarioId { get; set; }
 
         [JsonIgnore]
-        [Column("fk_sensor_id")]
+        [Column("id_sensor_fk")]
         public int SensorId { get; set; }
 
         [JsonIgnore]
-        [Column("fk_rotina_id")]
+        [Column("id_rotina_fk")]
         public int RotinaId { get; set; }
     }
 }

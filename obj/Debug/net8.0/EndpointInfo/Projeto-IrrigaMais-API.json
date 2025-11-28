@@ -33,17 +33,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ApiDto"
+                "$ref": "#/components/schemas/DadosApiDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ApiDto"
+                "$ref": "#/components/schemas/DadosApiDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ApiDto"
+                "$ref": "#/components/schemas/DadosApiDto"
               }
             }
           }
@@ -96,17 +96,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ApiDto"
+                "$ref": "#/components/schemas/DadosApiDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ApiDto"
+                "$ref": "#/components/schemas/DadosApiDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ApiDto"
+                "$ref": "#/components/schemas/DadosApiDto"
               }
             }
           }
@@ -307,7 +307,7 @@
       }
     },
     "/irrigacao/{id}/remover-rotina": {
-      "post": {
+      "delete": {
         "tags": [
           "Irrigacao"
         ],
@@ -1434,7 +1434,7 @@
   },
   "components": {
     "schemas": {
-      "ApiDto": {
+      "DadosApiDto": {
         "required": [
           "cidade",
           "pais",
@@ -1492,8 +1492,8 @@
       },
       "IrrigacaoDto": {
         "required": [
-          "apiId",
           "consumoHidrico",
+          "dadosApiId",
           "dataFinal",
           "dataInicial",
           "leituraSensorId"
@@ -1516,7 +1516,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "apiId": {
+          "dadosApiId": {
             "type": "integer",
             "format": "int32"
           }
@@ -1623,16 +1623,17 @@
         "required": [
           "frequencia",
           "horario",
-          "nome_rotina",
-          "tipo_execucao"
+          "nomeRotina",
+          "tipoExecucao",
+          "usuarioId"
         ],
         "type": "object",
         "properties": {
-          "nome_rotina": {
+          "nomeRotina": {
             "minLength": 1,
             "type": "string"
           },
-          "tipo_execucao": {
+          "tipoExecucao": {
             "minLength": 1,
             "type": "string"
           },
@@ -1644,26 +1645,30 @@
             "type": "integer",
             "format": "int32"
           },
-          "dia_seg": {
+          "diaSeg": {
             "type": "boolean"
           },
-          "dia_ter": {
+          "diaTer": {
             "type": "boolean"
           },
-          "dia_qua": {
+          "diaQua": {
             "type": "boolean"
           },
-          "dia_qui": {
+          "diaQui": {
             "type": "boolean"
           },
-          "dia_sex": {
+          "diaSex": {
             "type": "boolean"
           },
-          "dia_sab": {
+          "diaSab": {
             "type": "boolean"
           },
-          "dia_dom": {
+          "diaDom": {
             "type": "boolean"
+          },
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

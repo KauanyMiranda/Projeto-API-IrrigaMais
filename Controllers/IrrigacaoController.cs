@@ -41,17 +41,17 @@ namespace Projeto_IrrigaMais_API.Controllers
                     Rotinas = i.RotinasIrrigacoes.Select(ri => new
                     {
                         ri.Rotina.Id,
-                        ri.Rotina.nome_rotina,
-                        ri.Rotina.tipo_execucao,
-                        ri.Rotina.horario,
-                        ri.Rotina.frequencia,
-                        ri.Rotina.dia_seg,
-                        ri.Rotina.dia_ter,
-                        ri.Rotina.dia_qua,
-                        ri.Rotina.dia_qui,
-                        ri.Rotina.dia_sex,
-                        ri.Rotina.dia_sab,
-                        ri.Rotina.dia_dom
+                        ri.Rotina.NomeRotina,
+                        ri.Rotina.TipoExecucao,
+                        ri.Rotina.Horario,
+                        ri.Rotina.Frequencia,
+                        ri.Rotina.DiaSeg,
+                        ri.Rotina.DiaTer,
+                        ri.Rotina.DiaQua,
+                        ri.Rotina.DiaQui,
+                        ri.Rotina.DiaSex,
+                        ri.Rotina.DiaSab,
+                        ri.Rotina.DiaDom
                     }).ToList()
                 }).ToListAsync();
 
@@ -88,7 +88,7 @@ namespace Projeto_IrrigaMais_API.Controllers
             }
 
             var api = await _context.Apis
-                .FirstOrDefaultAsync(x => x.Id == novaIrrigacao.ApiId);
+                .FirstOrDefaultAsync(x => x.Id == novaIrrigacao.DadosApiId);
 
             if (api is null)
             {
@@ -101,7 +101,7 @@ namespace Projeto_IrrigaMais_API.Controllers
                 DtInicial = novaIrrigacao.DataInicial,
                 DtFinal = novaIrrigacao.DataFinal,
                 LeituraSensorId = novaIrrigacao.LeituraSensorId,
-                ApiId = novaIrrigacao.ApiId
+                DadosApiId = novaIrrigacao.DadosApiId
             };
 
             await _context.Irrigacoes.AddAsync(irrigacao);
@@ -127,7 +127,7 @@ namespace Projeto_IrrigaMais_API.Controllers
             irrigacao.DtInicial = atualizarIrrigacao.DataInicial;
             irrigacao.DtFinal = atualizarIrrigacao.DataFinal;
             irrigacao.LeituraSensorId = atualizarIrrigacao.LeituraSensorId;
-            irrigacao.ApiId = atualizarIrrigacao.ApiId;
+            irrigacao.DadosApiId = atualizarIrrigacao.DadosApiId;
 
             _context.Irrigacoes.Update(irrigacao);
             await _context.SaveChangesAsync();
@@ -187,8 +187,8 @@ namespace Projeto_IrrigaMais_API.Controllers
             return Ok(irrigacao);
         }
 
-        [HttpPost("{id}/remover-rotina")]
-        public async Task<IActionResult> RemoverUsuarioPorId(int id, int rotinaId)
+        [HttpDelete("{id}/remover-rotina")]
+        public async Task<IActionResult> RemoverRotinaPorId(int id, int rotinaId)
         {
             var irrigacao = await _context.Irrigacoes.Include(c => c.RotinasIrrigacoes).FirstOrDefaultAsync(x => x.Id == id);
 

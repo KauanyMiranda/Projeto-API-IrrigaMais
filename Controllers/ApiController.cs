@@ -63,9 +63,9 @@ namespace Projeto_IrrigaMais_API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Criar([FromBody] ApiDto novaApi)
+        public async Task<IActionResult> Criar([FromBody] DadosApiDto novaApi)
         {
-            var api = new Api()
+            var api = new DadosApi()
             {
                 Cidade = novaApi.Cidade,
                 Pais = novaApi.Pais,
@@ -87,7 +87,7 @@ namespace Projeto_IrrigaMais_API.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Atualizar(int id, [FromBody] ApiDto atualizarApi)
+        public async Task<IActionResult> Atualizar(int id, [FromBody] DadosApiDto atualizarApi)
         {
             var api = await _context.Apis.FirstOrDefaultAsync(a => a.Id == id);
 

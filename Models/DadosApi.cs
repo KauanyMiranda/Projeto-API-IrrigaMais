@@ -2,10 +2,10 @@
 
 namespace Projeto_IrrigaMais_API.Models
 {
-    [Table("api")]
-    public class Api
+    [Table("dados_api")]
+    public class DadosApi
     {
-        [Column("id_api")]
+        [Column("id_dados_api")]
         public int Id { get; set; }
 
         [Column("cidade")]
